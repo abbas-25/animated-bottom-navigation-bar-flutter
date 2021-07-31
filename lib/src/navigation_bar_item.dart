@@ -41,7 +41,8 @@ class NavigationBarItem extends StatelessWidget {
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: _isCenterIcon ? Color(0xff0104F6) : Colors.transparent,
+          // color: _isCenterIcon ? Color(0xff0104F6) : Colors.transparent,
+          color: _isCenterIcon ? Colors.red : Colors.transparent,
           shape: BoxShape.circle,
         ),
         child: CustomPaint(
