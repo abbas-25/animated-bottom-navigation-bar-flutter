@@ -37,7 +37,7 @@ class NavigationBarItem extends StatelessWidget {
     bool _isCenterIcon = index == 2;
     return Expanded(
       child: Container(
-        padding: EdgeInsets.all(8),
+        margin: EdgeInsets.all(8),
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
