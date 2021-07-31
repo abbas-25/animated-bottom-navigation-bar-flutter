@@ -5,6 +5,7 @@ import 'tab_item.dart';
 
 class NavigationBarItem extends StatelessWidget {
   final bool isActive;
+  final int index;
   final double bubbleRadius;
   final double maxBubbleRadius;
   final Color? bubbleColor;
@@ -18,6 +19,7 @@ class NavigationBarItem extends StatelessWidget {
 
   NavigationBarItem({
     required this.isActive,
+    required this.index,
     required this.bubbleRadius,
     required this.maxBubbleRadius,
     required this.bubbleColor,
@@ -32,10 +34,15 @@ class NavigationBarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool _isCenterIcon = index == 2;
     return Expanded(
       child: Container(
         height: double.infinity,
         width: double.infinity,
+        decoration: BoxDecoration(
+          color: Color(0xff0104F6),
+          shape:BoxShape.circle,
+        ),
         child: CustomPaint(
           painter: BubblePainter(
             bubbleRadius: isActive ? bubbleRadius : 0,

@@ -322,6 +322,7 @@ class _AnimatedBottomNavigationBarState
       items.add(
         NavigationBarItem(
           isActive: isActive,
+          index:i, 
           bubbleRadius: _bubbleRadius,
           maxBubbleRadius: widget.splashRadius,
           bubbleColor: widget.splashColor,
