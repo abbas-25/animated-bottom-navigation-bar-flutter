@@ -37,11 +37,12 @@ class NavigationBarItem extends StatelessWidget {
     bool _isCenterIcon = index == 2;
     return Expanded(
       child: Container(
+        padding: EdgeInsets.all(8),
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Color(0xff0104F6),
-          shape:BoxShape.circle,
+          color: _isCenterIcon ? Color(0xff0104F6) : Colors.transparent,
+          shape: BoxShape.circle,
         ),
         child: CustomPaint(
           painter: BubblePainter(
